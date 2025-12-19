@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLele1201的个人主页</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        minecraft: '#57A773',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-primary">McLele1201</h1>
+            <div class="flex items-center space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-primary transition-colors">关于我</a>
+                <a href="#hobby" class="text-gray-600 hover:text-primary transition-colors">我的爱好</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-16">
+        <!-- 头部横幅 -->
+        <section class="mb-12 text-center">
+            <div class="bg-gradient-to-r from-primary/10 to-minecraft/10 rounded-2xl p-8 md:p-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 text-shadow">McLele1201</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                    一个热爱生活、痴迷于我的世界的玩家
+                </p>
+            </div>
+        </section>
+
+        <!-- 关于我 -->
+        <section id="about" class="mb-16">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-8 card-hover">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-user-circle text-primary mr-3"></i>关于我
+                </h3>
+                <div class="text-gray-600 space-y-4">
+                    <p>大家好，我是McLele1201，一个热衷于游戏的爱好者，尤其对《我的世界》（Minecraft）有着浓厚的兴趣。</p>
+                    <p>我喜欢在《我的世界》中创造属于自己的世界，探索未知的领域，挑战各种有趣的玩法。无论是生存模式还是创造模式，都能让我沉浸其中。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 我的爱好 -->
+        <section id="hobby" class="mb-16">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-8 card-hover">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-gamepad text-minecraft mr-3"></i>我的爱好：我的世界
+                </h3>
+                <div class="text-gray-600 space-y-4">
+                    <p>《我的世界》是一款由Mojang Studios开发的沙盒游戏，它给予了玩家无限的创造力和探索空间。</p>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <p class="font-medium">我喜欢的玩法：</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1">
+                            <li>生存模式：收集资源、建造家园、对抗怪物</li>
+                            <li>创造模式：自由建造各种建筑、景观和机械</li>
+                            <li>模组玩法：体验各种有趣的模组，拓展游戏内容</li>
+                        </ul>
+                    </div>
+                    <p>如果你也喜欢《我的世界》，欢迎和我一起交流探讨！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section id="contact" class="mb-16">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-8 card-hover">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-link text-primary mr-3"></i>联系方式
+                </h3>
+                <div class="text-gray-600 space-y-4">
+                    <div class="flex items-center">
+                        <i class="fab fa-kickstarter-k text-[#00C4FF] text-xl mr-3"></i>
+                        <p>快手账号：<a href="https://www.kuaishou.com/" target="_blank" class="text-primary hover:underline">kalamula</a></p>
+                    </div>
+                    <p>欢迎在快手上关注我，我会分享一些游戏相关的内容和日常！</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div id="runtime" class="mb-4 text-lg">
+                本站已运行：<span id="days" class="font-bold text-primary">0</span>天
+                <span id="hours" class="font-bold text-primary">0</span>时
+                <span id="minutes" class="font-bold text-primary">0</span>分
+                <span id="seconds" class="font-bold text-primary">0</span>秒
+            </div>
+            <p class="text-gray-400">&copy; 2025 McLele1201 个人主页 | 所有权利保留</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 设定网站启动时间（可根据需要修改）
+        const launchDate = new Date('2025-12-18 23:01:14');
+
+        // 计算并更新运行时间
+        function updateRuntime() {
+            const now = new Date();
+            const diff = now - launchDate;
+
+            // 计算天、时、分、秒
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // 更新页面显示
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // 初始化并每秒更新一次
+        updateRuntime();
+        setInterval(updateRuntime, 1000);
+    </script>
+</body>
+</html>
